@@ -1,0 +1,285 @@
+body {
+    padding: 0;
+    position: relative;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 94%;
+    max-width: 1100px;
+}
+
+.content {
+    position: relative;
+    padding: 30px 210px 10px 210px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.content p {
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    margin-bottom: 50px;
+    text-align: justify;
+    font-size: 20px;
+    padding: 40px 80px 60px 80px;
+    box-shadow: 10px 40px 60px -30px rgba(0, 0, 0, 0.2);
+}
+
+#header {
+    z-index: 2;
+    position: fixed;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    background: #F6F8F8;
+    color: #34495E;
+    transition: all 0.2s ease-in-out;
+}
+
+#logo {
+    position: relative;
+    width: 200px;
+    margin: 0px;
+    height: 60px;
+    display: block;
+}
+
+#logo h1 {
+    margin-top: 9px;
+    letter-spacing: 1px;
+}
+
+.nav-up {
+    top: -60px;
+}
+
+nav {
+	display: block;
+    font-size: 1.3em;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    min-width: 400px;
+    margin-top: 9px;
+}
+
+
+
+nav ul {
+    margin: 0px;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    height: 30px;
+}
+
+nav ul li a {
+    position: relative;
+    display: block;
+    color: #34495E;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0px;
+    transition: all 150ms ease-in;
+    letter-spacing: 1px;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0px;
+  background-color: #1ABC9C;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+nav ul li a:hover::before {
+  visibility: visible;
+  transform: scaleX(0.8);
+}
+
+/*nav ul li a:hover::after {
+    content: "";
+    display: block;
+    width: auto;
+    border-bottom: 3px solid #1ABC9C;
+    margin: 0 auto;
+}*/
+
+nav ul li a.active {
+    color: #1ABC9C;
+}
+
+#slideshow {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    min-height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    transition: all linear 200ms;
+}
+
+.immagine-a {
+    background: #3b3b3b url(../images/Less-Than-Inspiring-Wallpapers-10.jpg);
+}
+
+.immagine-b {
+    background: #3b3b3b url(../images/Less-Than-Inspiring-Wallpapers-6.jpg) !important;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  background-color: #6C7E8F;
+  left: 50%;
+  height: 80px;
+  width: 190px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  left: 50%;
+  margin-left: -100px;
+  cursor: pointer;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: orangered;
+  opacity: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.button:hover::after {
+  opacity: 1;
+}
+
+#slideshow a {
+    display: block;
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    height: 90%;
+    margin-top: 20px;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 40px 0px 40px 0px;
+    font-size: 1.5em;
+    box-shadow: inset -10px -5px 20px 0px #000000;
+}
+
+.left {
+    left: 0px;
+    float: left;
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
+
+.centered {
+    text-align: center;
+    right: 50%;
+    left: 50%;
+}
+
+.page {
+    display: block;
+    height: 0px;
+    overflow: hidden;
+}
+
+.page p {
+    transition: all 300ms linear;
+    opacity: 0;
+}
+
+.page.visible {
+    height: 100%;
+    display: block;
+}
+
+.page.visible p {
+    transition: all 300ms linear;
+    opacity: 1;
+}
+
+.form {
+    display: block;
+    width: 100%;
+    background: inherit;
+    text-align: center;
+}
+
+input[type="text"], input[type="email"] {
+    width: 25%;
+    display: box;
+    padding: 10px 20px;
+    border: 2px solid #999;
+    border-radius: 3px;
+    display: block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: orangered;
+}
+
+input[type="submit"] {
+    font-family: 'PT Sans';
+    font-size: 1.1em;
+    width: 25%;
+    padding: 10px 20px;
+    background-color: orangered;
+    border-style: none;
+    border-radius: 5px;
+    transition: all 300ms;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #FA6900;
+}

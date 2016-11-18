@@ -1,0 +1,17 @@
+<!-- Script per cambiare slideshow al click -->
+
+<script>
+        $(document).ready(
+            function() {
+                $("#nav a").click(
+                    function() {
+                        $("#slideshow").attr("class", $(this).data("classe"));
+                        return false;
+                        
+                    }
+                 )
+            }
+        );
+</script> 
+
+<-- Fine -->
